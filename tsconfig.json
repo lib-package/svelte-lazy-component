@@ -2,12 +2,18 @@
   "compilerOptions": {
     "typeRoots": ["./node_modules/@types", "./@types"],
     "target": "ES6",
-    "module": "commonjs",
+    "module": "ESNext",
     "lib": ["DOM", "ES6"], // Ensure 'DOM' is included here
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true // Optional: skips type checking of declaration files
-    // other options...
+    "skipLibCheck": true, // Optional: skips type checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true, // Emit TypeScript declaration files for your library
+    "outDir": "dist",
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "*": ["./src/*"] // Make sure the src folder is mapped correctly
+    }
   },
   "include": ["./index.ts", "./src/**/*", "./@types/**/*"], // Adjust based on your project structure
   "exclude": ["node_modules"]

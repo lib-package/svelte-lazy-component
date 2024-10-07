@@ -23,5 +23,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Build the project
+        run: npm run build # Ensure this builds your Svelte component into JavaScript
+
       - name: Publish package
         run: npx jsr publish --allow-dirty
