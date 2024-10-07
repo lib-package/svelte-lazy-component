@@ -1,0 +1,16 @@
+{
+  "name": "@jhenbert/svelte-lazy-component",
+  "version": "0.1.0",
+  "exports": "./index.ts",
+  "include": ["./index.ts", "/src/**/*", "README.md"],
+  "exclude": [
+    "./node_modules",
+    ".github",
+    ".npmrc",
+    ".gitignore",
+    "LICENSE",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ]
+}
