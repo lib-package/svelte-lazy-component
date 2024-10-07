@@ -5,16 +5,16 @@ import typescript from "@rollup/plugin-typescript";
 import { sveltePreprocess } from "svelte-preprocess";
 
 export default {
-  input: "./index.ts", // Make sure this points to the correct entry file
+  input: "src/index.ts", // Ensure this points to your main entry file
   output: [
     {
       file: "dist/index.js",
-      format: "es", // ES module format
+      format: "es", // Use 'es' format
       sourcemap: true,
     },
     {
       file: "dist/index.cjs.js",
-      format: "cjs", // CommonJS format for Node.js
+      format: "cjs",
       sourcemap: true,
     },
   ],
@@ -32,7 +32,7 @@ export default {
     commonjs(),
     typescript({
       sourceMap: true,
-      tsconfig: "./tsconfig.json",
+      tsconfig: "./tsconfig.json", // Ensure this points to your tsconfig file
     }),
   ],
   external: ["svelte"], // Exclude Svelte from the bundle

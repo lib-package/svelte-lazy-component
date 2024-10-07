@@ -1,19 +1,18 @@
 {
   "compilerOptions": {
     "typeRoots": ["./node_modules/@types", "./@types"],
-    "target": "ES6",
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true, // Optional: skips type checking of declaration files
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true, // Emit TypeScript declaration files for your library
+    "skipLibCheck": true,
+    "declaration": true,
     "outDir": "dist",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": true, // This is important for Svelte components
     "baseUrl": "./",
     "paths": {
-      "*": ["src/*"] // Make sure the src folder is mapped correctly
+      "*": ["src/*"] // Adjust based on your project structure
     }
   },
   "include": ["./index.ts", "src/**/*.ts", "src/**/*.svelte"], // Adjust based on your project structure
