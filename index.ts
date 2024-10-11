@@ -1,3 +1,1 @@
-import LazyComponent from "./src/components/LazyComponent.svelte";
-
-export default LazyComponent;
+export { default as LazyComponent } from "./src/components/LazyComponent.svelte";

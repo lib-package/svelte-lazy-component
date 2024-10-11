@@ -21,9 +21,10 @@ export default {
   plugins: [
     svelte({
       preprocess: sveltePreprocess(),
-      // compilerOptions: {
-      //   dev: !process.env.PRODUCTION,
-      // },
+      emitCss: false, // Disable CSS extraction
+      compilerOptions: {
+        dev: !process.env.PRODUCTION,
+      },
     }),
     resolve({
       browser: true,
