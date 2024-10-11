@@ -13,7 +13,6 @@ declare module "svelte/elements" {
   }
 }
 
-// src/global.d.ts
 declare module "*.svelte" {
   import { SvelteComponentTyped } from "svelte";
   const component: SvelteComponentTyped;
