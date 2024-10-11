@@ -9,7 +9,7 @@
     ".npmrc",
     ".gitignore",
     "LICENSE",
-    "./src/**/*",
+    "src/**/*",
     "package-lock.json",
     "tsconfig.json",
     "package.json",
