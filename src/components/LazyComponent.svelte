@@ -1,9 +1,10 @@
 <script lang="ts">
   import viewport from "../lib/viewport-action";
 
-  let loadComponent: any;
-
+  let loadComponent;
   export { loadComponent as this };
+
+  export let threshold: number = 0;
 
   let isShowingComponent = false;
   let componentPromise: Promise<{
@@ -17,7 +18,7 @@
 </script>
 
 {#if !isShowingComponent}
-  <div use:viewport on:enterViewport={handleEnterViewport} />
+  <div use:viewport={threshold} on:enterViewport={handleEnterViewport} />
 {:else}
   {#await componentPromise}
     <slot name="fallback">Loading...</slot>

@@ -44,7 +44,8 @@ Provide a custom fallback to be displayed while the component is loading:
 
 ## Props
 
-`this` props accept dynamic import of your component.
+- `this` props accept dynamic import of your component.
+- `threshold` optional props accepts a number, in pixels for when to trigger visibility changes.
 
 ## Contributing
 
