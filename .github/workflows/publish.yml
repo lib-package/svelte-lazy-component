@@ -15,21 +15,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "18" # Ensure this matches your local environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Ensure this matches your local environment
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Check directory structure
-      #   run: |
-      #     echo "Contents of src:"
-      #     ls -R src
+      - name: Check directory structure
+        run: |
+          echo "Contents of src:"
+          ls -R src
 
-      # - name: Build
-      #   run: npm run build --verbose # Adding --verbose to get detailed logs
+      - name: Build
+        run: npm run build --verbose # Adding --verbose to get detailed logs
 
       - name: Publish package
         run: npx jsr publish --allow-dirty

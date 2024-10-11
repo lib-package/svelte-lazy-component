@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./node_modules/@types", "./@types"],
+    "types": ["svelte"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -16,5 +16,6 @@
     }
   },
   "include": ["./index.ts", "src/**/*.ts", "src/**/*.svelte"], // Adjust based on your project structure
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "extends": "@tsconfig/svelte/tsconfig.json"
 }
