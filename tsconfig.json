@@ -15,7 +15,7 @@
       "*": ["src/*"] // Adjust based on your project structure
     }
   },
-  "include": ["./index.ts", "src/**/*.ts", "src/**/*.svelte"], // Adjust based on your project structure
+  "include": ["src/**/*.ts", "src/**/*.svelte"], // Adjust based on your project structure
   "exclude": ["node_modules"],
   "extends": "@tsconfig/svelte/tsconfig.json"
 }
