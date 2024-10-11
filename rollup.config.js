@@ -5,7 +5,7 @@ import typescript from "@rollup/plugin-typescript";
 import { sveltePreprocess } from "svelte-preprocess";
 
 export default {
-  input: "./index.ts", // Ensure this points to your main entry file
+  input: "src/components/LazyComponent.svelte", // Ensure this points to your main entry file
   output: [
     {
       file: "dist/index.js",

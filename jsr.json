@@ -2,7 +2,7 @@
   "name": "@jhenbert/svelte-lazy-component",
   "version": "0.1.0",
   "exports": "./dist/index.d.ts",
-  "include": ["./index.ts", "README.md"],
+  "include": ["README.md", "/dist/**/*"],
   "exclude": [
     "./node_modules",
     ".github",
