@@ -1,7 +1,8 @@
 {
   "name": "@jhenbert/svelte-lazy-component",
   "version": "0.1.0",
-  "exports": "./dist/index.js",
+  "exports": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "include": ["README.md", "/dist/**/*"],
   "exclude": [
