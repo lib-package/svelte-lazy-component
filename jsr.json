@@ -1,10 +1,8 @@
 {
   "name": "@jhenbert/svelte-lazy-component",
-  "version": "0.1.1",
-  "exports": "./dist/index.cjs.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "include": ["README.md", "/dist/**/*"],
+  "version": "0.1.2",
+  "exports": "./src/index.ts",
+  "include": ["README.md", "./src/**/*"],
   "exclude": [
     "./node_modules",
     ".github",
@@ -12,7 +10,6 @@
     ".gitignore",
     "LICENSE",
     "package-lock.json",
-    "/src/**/*",
     "tsconfig.json",
     "package.json",
     "rollup.config.js"
