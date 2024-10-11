@@ -15,8 +15,11 @@ declare module "svelte/elements" {
 
 declare module "*.svelte" {
   import { SvelteComponentTyped } from "svelte";
-  const component: SvelteComponentTyped;
-  export default component;
+  export default class SvelteComponent extends SvelteComponentTyped<
+    any,
+    any,
+    any
+  > {}
 }
 
 export {};

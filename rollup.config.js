@@ -5,11 +5,11 @@ import typescript from "@rollup/plugin-typescript";
 import { sveltePreprocess } from "svelte-preprocess";
 
 export default {
-  input: "src/components/LazyComponent.svelte", // Ensure this points to your main entry file
+  input: "src/index.ts", // Change to the central entry point
   output: [
     {
       file: "dist/index.js",
-      format: "es", // Use 'es' format
+      format: "es",
       sourcemap: true,
     },
     {
@@ -21,17 +21,22 @@ export default {
   plugins: [
     svelte({
       preprocess: sveltePreprocess(),
-      emitCss: false, // Disable CSS extraction
+      emitCss: false,
       compilerOptions: {
         dev: !process.env.PRODUCTION,
       },
     }),
     resolve({
       browser: true,
-      dedupe: ["svelte"], // Avoid duplicating Svelte
+      dedupe: ["svelte"],
     }),
     commonjs(),
-    typescript(),
+    typescript({
+      declaration: true,
+      declarationDir: "dist",
+      rootDir: "src",
+      exclude: ["node_modules"],
+    }),
   ],
-  external: ["svelte"], // Exclude Svelte from the bundle
+  external: ["svelte", "svelte/internal"], // Ensure svelte and its internals are excluded
 };
